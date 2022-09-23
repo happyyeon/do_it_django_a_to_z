@@ -14,6 +14,7 @@ from django.shortcuts import get_object_or_404
 class PostList(ListView):
     model = Post
     ordering = '-pk'
+    paginate_by = 5
 
     # 카테고리 레코드 추가를 위한 함수 오버라이딩
     def get_context_data(self,**kwargs):
