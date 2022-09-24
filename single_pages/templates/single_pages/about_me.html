@@ -1,20 +1,189 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>개발자 달타냥입니다.</title>
+    <title> Sexy Developer Yeon</title>
+
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'single_pages/css/about_me.css' %}" media="screen">
+    <script src="https://kit.fontawesome.com/7738fa2555.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<nav>
-  <a href="/blog/">Blog</a>
-  <a href="/about_me">About me</a>
-</nav>
+{% include 'blog/navbar.html' %}
 
-<h1>안녕하세요. 달타냥입니다.</h1>
-<h2>이력</h2>
-<h2>Portfolio</h2>
-<h3>아직 공사중입니다.</h3>
+<section>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8">
+                <h1>안녕하세요. 섹시한 개발자 이정연입니다.</h1>
+                <br/>
+                <p class="lead">
+                    철학과 음악을 향유합니다.<br/>
+                    웹 개발로 돈을 벌고, 퇴근 후 제가 좋아하는 일을 하며 지냅니다.
+                </p>
+
+                <ul>
+                    <li>PROJECT</li>
+                    <ul>
+                        <li>Contactless YouTube Control App in Android</li>
+                        <li>Do It Django Clone Coding</li>
+                    </ul>
+                    <li>EDUCATION</li>
+                    <ul>
+                        <li>공학학사, 전자통신공학, 광운대학교 (2016.03~2023.02)</li>
+                        <li>논산대건고등학교 (2013.03~2016.02)</li>
+                    </ul>
+                </ul>
+
+            </div>
+            <div class="col-lg-4">
+                <img class="img-fluid" src="{% static 'single_pages/images/my_face.jpeg' %}">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-light margin-for-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>PORTFOLIO</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#youtube">
+                    <img class="card-img-top" src="{% static 'single_pages/images/youtube.png' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">Capstone Design</h5>
+                        <p>캡스톤 프로젝트로 진행한 비접촉 유튜브 제어 앱 시연 영상입니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#inflearn_django2">
+                    <img class="card-img-top" src="{% static 'single_pages/images/inflearn_django2.png' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">파이썬 사용자를 위한 웹개발 입문 A to Z Django + Bootstrap</h5>
+                        <p>파이썬 웹개발에 대한 공부를 했습니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card" data-toggle="modal" data-target="#automation_python">
+                    <img class="card-img-top" src="{% static 'single_pages/images/smile.png' %}">
+                    <div class="card-body">
+                        <h5 class="card-title">추가 예정</h5>
+                        <p>이정연의 개발 인생은 계속됩니다!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="youtube" tabindex="-1" role="dialog" aria-labelledby="youtubeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="youtubeModalLabel">비접촉 유튜브 제어 앱</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <a class="btn btn-primary" href="https://youtu.be/tMfvdW4jtSI" role="button">YouTube Link</a>
+                    </div>
+                    <div class="col-lg-5">
+                        <p>제스쳐를 이용하여 유튜브 동영상을 제어할 수 있는 앱을 개발하였습니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="inflearn_django2" tabindex="-1" role="dialog" aria-labelledby="inflearnDjangoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id=" inflearnDjangoModalLabel">파이썬 사용자를 위한 웹개발 입문 A to Z Django + Bootstrap</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img class="img-fluid" src="{% static 'single_pages/images/inflearn_django2.png' %}">
+                    </div>
+                    <div class="col-lg-5">
+                        <p>파이썬 초보를 대상으로 한 웹개발 강좌를 수강하였습니다.</p>
+                        <button type="button" class="btn btn-light"><i class="fas fa-chalkboard-teacher"></i> 인프런</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="automation_python" tabindex="-1" role="dialog" aria-labelledby="automationPythonModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id=" automationPythonModalLabel">추후 업데이트 예정</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img class="img-fluid" src="{% static 'single_pages/images/automation_python.png' %}">
+                    </div>
+                    <div class="col-lg-5">
+                        <p>이정연의 개발 인생은 계속 됩니다!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="fixed-bottom">
+    {% include 'blog/footer.html' %}
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
 
 </body>
 </html>
